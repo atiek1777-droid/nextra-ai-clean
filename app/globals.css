@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0b0d0a;
+  color: #e7e9e2;
+}
+
+* {
+  scrollbar-color: #7c8a55 #12140f;
+}
+
+/* ---- Signature: the sliced notch, echoing the cut diagonal in the nextra-ai mark ---- */
+.notch {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%
+  );
+}
+[dir='rtl'] .notch {
+  clip-path: polygon(
+    18px 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 18px
+  );
+}
+.notch-sm {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+}
+[dir='rtl'] .notch-sm {
+  clip-path: polygon(
+    10px 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 10px
+  );
+}
+
+/* ---- Gradient text (kept as one text node — never split into spans/letters) ---- */
+.grad-text {
+  background: linear-gradient(90deg, #e7e9e2 0%, #afc96c 45%, #7c8a55 75%, #e7e9e2 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: sheen 7s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grad-text {
+    animation: none;
+    background-position: 0 0;
+  }
+  .animate-pulse2,
+  .animate-drift,
+  .animate-sheen {
+    animation: none !important;
+  }
+}
+
+.node-dot {
+  box-shadow: 0 0 0 3px rgba(175, 201, 108, 0.15);
+}
+
+.field-focus:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #afc96c;
+}
+
+::selection {
+  background: #7c8a55;
+  color: #0b0d0a;
+}
