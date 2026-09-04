@@ -6,12 +6,12 @@ import Footer from '../components/Footer';
 
 const displayEn = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  weight: ["400", "500", "700"],
   variable: '--font-display-en'
 });
 const bodyEn = IBM_Plex_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ["400", "500", "700"],
   variable: '--font-body-en'
 });
 // Headings: Cairo Bold — geometric, bold, high-clarity Arabic display face.
@@ -23,7 +23,7 @@ const displayAr = Cairo({
 // Body copy: Tajawal — comfortable, highly readable at small sizes.
 const bodyAr = Tajawal({
   subsets: ['arabic'],
-  weight: ['400', '500', '600'],
+  weight: ["400", "500", "700"],
   variable: '--font-body-ar'
 });
 
